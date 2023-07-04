@@ -1,0 +1,26 @@
+{
+  "name": "petfinder",
+  "version": "1.0.0",
+  "description": "Find lost pets. ExpressJS Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F0xyBG/PetFinder.git"
+  },
+  "keywords": [
+    "Pets",
+    "Find"
+  ],
+  "author": "The best of the best",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/F0xyBG/PetFinder/issues"
+  },
+  "homepage": "https://github.com/F0xyBG/PetFinder#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
