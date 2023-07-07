@@ -131,7 +131,7 @@ section {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: #f2f2f2;
+  background: #32982F;
 }
 
 .header.sticked {
@@ -256,7 +256,8 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: var(--color-default);
+   /* color: var(--color-default); */
+   color:#f2f2f2;
   }
 
   .navbar .getstarted,
