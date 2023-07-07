@@ -131,7 +131,7 @@ section {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: #32982F;
+  background: #638C4F;
 }
 
 .header.sticked {
@@ -1298,4 +1298,25 @@ section {
 
 .footer .credits a {
   color: var(--color-white);
+}
+
+.signal-title{
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 240%;
+  font-style: normal;
+  font-weight: 700;
+
+padding-top: 100px;
+padding-left: 227px;
+padding-right: 227px;
+padding-bottom: 857px;
+}
+
+.breik-liniq{
+  padding-top: 40px;
+  padding-left: 170px;
+  padding-right: 170px;
+  border-bottom: 2px solid var(--color-black);
 }
