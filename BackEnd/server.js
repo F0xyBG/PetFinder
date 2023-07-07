@@ -4,9 +4,13 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const Database = require('./database.js');
 const db = new Database();
-const multer = require('multer')
-const path = require('path')
+const multer = require('multer');
+const path = require('path');
+const cors = require("cors");
 
+
+// Use CORS policy
+app.use(cors());
 
 //use express static folder
 app.use(express.static("./public"))
