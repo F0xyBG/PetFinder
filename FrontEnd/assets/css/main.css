@@ -131,7 +131,7 @@ section {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: 32982F;
+  background: #32982F;
 }
 
 .header.sticked {
@@ -1344,7 +1344,7 @@ section {
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
 
   color: white;
-  background: #638C4F;
+  background: #32982F;
   text-align: center;
   font-family: Inter;
   font-size: 300%;
