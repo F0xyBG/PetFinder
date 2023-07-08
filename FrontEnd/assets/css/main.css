@@ -1308,10 +1308,10 @@ section {
   font-style: normal;
   font-weight: 700;
 
-padding-top: 100px;
-padding-left: 227px;
-padding-right: 227px;
-padding-bottom: 80px;
+  padding-top: 100px;
+  padding-left: 227px;
+  padding-right: 227px;
+  padding-bottom: 30px;
 }
 
 .breik-liniq{
@@ -1331,15 +1331,23 @@ padding-bottom: 80px;
 }
 
 .signal-buton{
-  display: flex;
+  display: inline-block;
   flex-direction: column;
+  vertical-align: middle;
   justify-content: center;
-  flex-shrink: 0;
+  flex-shrink: 0; 
+  padding-top: 12px;
+  padding-right: 40px;
+  padding-bottom: 12px;
+  padding-left: 40px;
 
-  color: #638C4F;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+
+  color: white;
+  background: #638C4F;
   text-align: center;
   font-family: Inter;
-  font-size: 400%;
+  font-size: 300%;
   font-style: normal;
   font-weight: 600;
 }
