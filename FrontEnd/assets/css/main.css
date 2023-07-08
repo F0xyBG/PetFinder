@@ -131,7 +131,7 @@ section {
   height: 90px;
   transition: all 0.5s;
   z-index: 997;
-  background: #32982F;
+  background: #638C4F;
 }
 
 .header.sticked {
@@ -1298,4 +1298,56 @@ section {
 
 .footer .credits a {
   color: var(--color-white);
+}
+
+.signal-title{
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 240%;
+  font-style: normal;
+  font-weight: 700;
+
+  padding-top: 100px;
+  padding-left: 227px;
+  padding-right: 227px;
+  padding-bottom: 30px;
+}
+
+.breik-liniq{
+  padding-top: 40px;
+  padding-left: 170px;
+  padding-right: 170px;
+  border-bottom: 2px solid var(--color-black);
+}
+
+.signal-tekst{
+  color: #000;
+  text-align: center;
+  font-family: EB Garamond;
+  font-size: 220%;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.signal-buton{
+  display: inline-block;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+  flex-shrink: 0; 
+  padding-top: 12px;
+  padding-right: 40px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+
+  color: white;
+  background: #638C4F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 300%;
+  font-style: normal;
+  font-weight: 600;
 }
