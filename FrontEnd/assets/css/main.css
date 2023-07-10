@@ -1540,3 +1540,19 @@ section {
   font-weight: 700;
   line-height: 34.5px;
 }
+
+
+.postContainer{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40%;
+  height: 60%;
+  border-radius: 80px;
+  border: 14px solid #868686;
+  background: #CECECE;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
