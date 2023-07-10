@@ -132,34 +132,37 @@
       <section class="category-section">
           <div class="container" data-aos="fade-up">
 
-              <div class="section-header d-flex justify-content-between align-items-center mb-5">
-                  <h2>Публикации</h2>
-                  <div><a href="category.html" class="more">Филтри</a></div>
-              </div>
-              <div class="row">
-                  <div class="col">
-                   Edinkon
-                   <div class="post-entry-1">
-                      <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
-                      <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                      <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
-                    </div>
-                 </div> 
-                 <div class="col">
-                   Vtorikon
-                   <div class="post-entry-1">
-                    <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
-                    <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                    <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
-                  </div>
-                  </div> 
-              </div>
+                <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                    <h2>Публикации</h2>
+                    <div><a href="category.html" class="more">Филтри</a></div>
+                </div>
+                <div class="row" id="postFeed">
+                    <div class="col">
 
+                        <div class="post-entry-1">
+                            <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+                            <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                            <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                        <div class="post-entry-1">
+                            <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+                            <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                            <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breik-liniq"></div>
+
+                <p class="signal-title">Намерили сте изгубено животно? </br> Или сте изгубили домашния си любимец?</p>
               <div class="breik-liniq"></div>
 
             <p class="signal-title">Намерили сте изгубено животно? </br> Или сте изгубили домашния си любимец?</p> 
 
-            <p class="signal-tekst">Направете публикация за по-малко от 5 минути, като оставите телефон за връзка, локация, на която сте намерили/изгубили животното, текстово описание, както и негова снимка.</p>
+                <p class="signal-tekst">Направете публикация за по-малко от 5 минути, като оставите телефон за връзка, локация, на която сте намерили/изгубили животното, текстово описание, както и негова снимка.</p>
 
             <button class="signal-buton"> Подай Сигнла</button>
              
@@ -317,6 +320,59 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+    <!--<div class="col">
+        <div class="post-entry-1">
+            <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+            <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+            <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+        </div>
+    </div>-->
+     <script>
+
+     const feed = document.getElementById("postFeed");
+     let htmlString = "";
+     let status = "";
+     let i = 0;
+
+     fetch('http://localhost:3000/posts')
+     .then(
+         function (response) {
+             if (response.status !== 200) {
+                 console.log('Looks like there was a problem. Status Code: ' +
+                     response.status);
+                 return;
+             }
+
+             // Examine the text in the response
+             response.json().then(function (data) {
+                 console.log(data);
+                 data.forEach((post) => {
+                     i++;
+                     
+                     if (post.status == "searching_for_owner") {    status = "Намерено"}
+                     else if (post.status == "searching_for_pet") {status = "Изгубено"}
+                     else if (post.status == "found") {status = "Изгубено"}
+                     htmlString += `
+                     <div class="col">
+                         <div class="post-entry-1">
+                             <a href="single-post.html"><img src="`+ post.images + `" alt="Снимка" class="img-fluid" style="width:  636px; height: 404px;"></a>
+                             <div class="post-meta"><span class="date">` + post.category + `, ` + status +`</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                             <h2><a href="single-post.html">` + post.title + `</a></h2>
+                         </div>
+                     </div>
+                     `;
+                 })
+                feed.innerHTML = htmlString;
+             });
+         }
+     )
+     .catch(function (err) {
+         console.log('Fetch Error :-S', err);
+     });
+
+     </script>
+
 
 </body>
 
