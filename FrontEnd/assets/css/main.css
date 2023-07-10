@@ -653,11 +653,8 @@ section {
 
 .img-bg .img-bg-inner {
   position: relative;
-  z-index: 2;
-  max-width: 700px;
-  position: relative;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 230px;
+  padding-right: 230px;
   margin-bottom: 50px;
 }
 
@@ -1522,3 +1519,40 @@ section {
     margin-bottom: 5px;
 }
 
+
+
+.imgContainer{
+  position: relative;
+  text-align: center;
+}
+
+.imgText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #FFF;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: EB Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34.5px;
+}
+
+
+.postContainer{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40%;
+  height: 60%;
+  border-radius: 80px;
+  border: 14px solid #868686;
+  background: #CECECE;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
