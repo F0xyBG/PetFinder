@@ -136,24 +136,26 @@
                     <h2>Публикации</h2>
                     <div><a href="category.html" class="more">Филтри</a></div>
                 </div>
-                <div class="row" id="postFeed">
-                    <div class="col">
+                <div id="postFeed">
+                    <div class="row">
+                        <div class="col">
 
-                        <div class="post-entry-1">
-                            <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
-                            <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                            <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                            <div class="post-entry-1">
+                                <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+                                <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="post-entry-1">
+                                <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+                                <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-
-                        <div class="post-entry-1">
-                            <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
-                            <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                            <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
-                        </div>
-                    </div>
-                </div>
+                 </div>
 
                 <div class="breik-liniq"></div>
 
@@ -348,8 +350,8 @@
              response.json().then(function (data) {
                  console.log(data);
                  data.forEach((post) => {
-                     i++;
-                     
+                     if (i % 2 == 0) { htmlString += '<div class="row">' }
+
                      if (post.status == "searching_for_owner") {    status = "Намерено"}
                      else if (post.status == "searching_for_pet") {status = "Изгубено"}
                      else if (post.status == "found") {status = "Изгубено"}
@@ -362,6 +364,8 @@
                          </div>
                      </div>
                      `;
+                     if (i % 2 != 0) { htmlString += '</div>' }
+                     i++;
                  })
                 feed.innerHTML = htmlString;
              });
