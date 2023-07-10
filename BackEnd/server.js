@@ -1,9 +1,25 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const Database = require('./database.js');
 const db = new Database();
+const multer = require('multer');
+const path = require('path');
+const cors = require("cors");
+
+
+// Use CORS policy
+app.use(cors());
+
+//use express static folder
+app.use(express.static("./public"))
+
+// body-parser middleware use
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
 // parse application/json
 app.use(bodyParser.json())
@@ -11,6 +27,22 @@ app.use(bodyParser.json())
 app.get('/test', (req, res) => {
   res.send('gosho ne stava')
 })
+
+//! Use of Multer
+var storage = multer.diskStorage({
+    destination: (req, file, callBack) => {
+        callBack(null, './images/')     // './images/' directory name where save the file
+    },
+    filename: (req, file, callBack) => {
+        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+var upload = multer({
+    storage: storage
+});
+
+//! Routes start
 
 //API endpoint for getting all posts
 app.get("/posts", (req, res) => {
@@ -27,6 +59,11 @@ app.get("/post/:post_id", (req, res) => {
 });
 
 //API endpoint for getting all comments for a post
+app.get("/images/:filename", (req, res) => {
+    res.sendFile(__dirname + "/images/" + req.params.filename);
+});
+
+//API endpoint for getting all comments for a post
 app.get("/comments/:post_id", (req, res) => {
     db.getComments(req.params.post_id).then((val) => {
         res.json(val);
@@ -34,8 +71,9 @@ app.get("/comments/:post_id", (req, res) => {
 });
 
 //API endpoint for uploading a post
-app.post("/postUpload", (req, res) => {
-    db.insertPost(req.body.title, req.body.text, req.body.images, req.body.phone, req.body.name, req.body.category, req.body.status).then((val) => {
+app.post("/postUpload", upload.single('image'), (req, res) => {
+    let img = "http://localhost:3000/images/" + req.file.filename;
+    db.insertPost(req.body.title, req.body.text, img, req.body.phone, req.body.name, req.body.category, req.body.status).then((val) => {
         res.json(val);
     })
 });

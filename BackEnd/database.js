@@ -10,7 +10,7 @@ let Database = class {
     // Get posts 
     getPosts() {
         const promise = new Promise((resolve, reject) => {
-            this.con.query('SELECT * FROM `posts`', function (error, results, fields) {
+            this.con.query('SELECT * FROM `posts` WHERE `status` != "found"', function (error, results, fields) {
                 if (error) throw error;
                 resolve(results);
             });
