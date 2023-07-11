@@ -74,7 +74,7 @@ app.get("/comments/:post_id", (req, res) => {
 app.post("/postUpload", upload.single('image'), (req, res) => {
     var host = req.get('host');
     let img = "http://localhost:3000/images/" + req.file.filename;
-    db.insertPost(req.body.title, req.body.text, img, req.body.phone, req.body.name, req.body.category, req.body.status).then((val) => {
+    db.insertPost(req.body.title, req.body.text, img, req.body.phone, req.body.name, req.body.category, req.body.status, req.body.location).then((val) => {
         res.redirect(host);
     })
 });
