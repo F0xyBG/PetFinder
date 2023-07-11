@@ -1405,6 +1405,7 @@ section {
 #popup-header {
     display: flex;
     justify-content: flex-end;
+    padding-right: 15px;
 }
 
 #close-popup {
@@ -1415,6 +1416,7 @@ section {
 #popup-header2 {
     display: flex;
     justify-content: flex-end;
+    padding-right: 15px;
 }
 
 #close-popup2 {
@@ -1475,7 +1477,7 @@ section {
     }
 
     #popup2 .post-image img {
-        width: 70%;
+        width: 60%;
         height: 70%;
         border-radius: 4px;
         margin-bottom: 10px;
