@@ -186,10 +186,13 @@
                 <input type="file" name="image" accept='image/*'>
                 <input type="submit" value="Upload">
             </form>  -->
-            <form>
-               <div class="postContainer container">
+            <form id="myForm" method="POST" class="form-popup" action="http://localhost:3000/postUpload" enctype="multipart/form-data">
+                <div id="popup-header">
+                    <span id="close-popup">&times;</span>
+                </div>
+                <div class="postContainer container">
                     <h2>Бланка за попълване</h2>
-               </div>
+                </div>
             </form>
         </div>
 
