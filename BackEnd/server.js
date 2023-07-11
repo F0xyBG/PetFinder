@@ -72,9 +72,10 @@ app.get("/comments/:post_id", (req, res) => {
 
 //API endpoint for uploading a post
 app.post("/postUpload", upload.single('image'), (req, res) => {
+    var host = req.get('host');
     let img = "http://localhost:3000/images/" + req.file.filename;
     db.insertPost(req.body.title, req.body.text, img, req.body.phone, req.body.name, req.body.category, req.body.status).then((val) => {
-        res.json(val);
+        res.redirect(host);
     })
 });
 

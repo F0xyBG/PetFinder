@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 10 юли 2023 в 14:06
+-- Време на генериране: 11 юли 2023 в 08:36
 -- Версия на сървъра: 10.4.27-MariaDB
 -- Версия на PHP: 8.2.0
 
@@ -94,7 +94,18 @@ INSERT INTO `posts` (`id`, `title`, `text`, `images`, `phone`, `name`, `category
 (5, 'idk', 'idk', 'http://localhost:3000/images/image-1688729093161.jfif', 'idk', 'idk', 'idk', 'found', '', '2008-11-11 00:00:00'),
 (6, 'John', 'Doe', 'http://localhost:3000/images/image-1688734184598.png', 'John', 'Doe', 'John', 'searching_for_pet', '', '2008-11-11 00:00:00'),
 (7, 'John', 'Doe', 'http://localhost:3000/images/image-1688973355606.jpg', 'John', 'Doe', 'John', 'searching_for_pet', '', '2008-11-11 00:00:00'),
-(8, 'Тестов пост', 'ООО нее загубих си кученцетоо много е сладкоо и ми липсваааа', 'http://localhost:3000/images/image-1688979736460.webp', '08969696969', 'Монката', 'куче', 'searching_for_pet', '', '2023-07-10 12:02:16');
+(8, 'Тестов пост', 'ООО нее загубих си кученцетоо много е сладкоо и ми липсваааа', 'http://localhost:3000/images/image-1688979736460.webp', '08969696969', 'Монката', 'куче', 'searching_for_pet', '', '2023-07-10 12:02:16'),
+(9, 'dw', 'dwa', 'http://localhost:3000/images/image-1688993092156.png', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:44:52'),
+(10, 'dwa', 'daw', 'http://localhost:3000/images/image-1688993179766.png', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:46:19'),
+(11, 'dwa', 'dwa', 'http://localhost:3000/images/image-1688993637421.webp', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:53:57'),
+(12, 'dwaaa', 'dwa', 'http://localhost:3000/images/image-1688993682268.jfif', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:54:42'),
+(13, 'dwa', 'dwa', 'http://localhost:3000/images/image-1688993834798.webp', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:57:14'),
+(14, 'dwa', 'dwa', 'http://localhost:3000/images/image-1688993959187.webp', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:59:19'),
+(15, 'dwaawa', 'dwa', 'http://localhost:3000/images/image-1688993979368.png', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 15:59:39'),
+(16, 'dwaaaaaaaaaaa', 'dwa', 'http://localhost:3000/images/image-1688994175103.jfif', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 16:02:55'),
+(17, 'dwaaaaaaaaaaa222222', 'dwa', 'http://localhost:3000/images/image-1688994199497.jfif', 'dwa', 'dwa', 'куче', 'searching_for_pet', '', '2023-07-10 16:03:19'),
+(18, 'eho', 'eh', 'http://localhost:3000/images/image-1688994224444.png', 'eh', 'eh', 'куче', 'searching_for_pet', '', '2023-07-10 16:03:44'),
+(19, 'aw', 'aw', 'http://localhost:3000/images/image-1688994417111.jfif', 'aw', 'aw', 'куче', 'searching_for_pet', '', '2023-07-10 16:06:57');
 
 --
 -- Indexes for dumped tables
@@ -127,7 +138,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Ограничения за дъмпнати таблици

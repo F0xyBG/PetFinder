@@ -1412,6 +1412,16 @@ section {
     font-size: 24px;
 }
 
+#popup-header2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-popup2 {
+    cursor: pointer;
+    font-size: 24px;
+}
+
 .form-popup h2 {
     margin-top: 0;
 }
