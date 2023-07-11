@@ -193,20 +193,26 @@
                         <h1 class="postHeading">Бланка за попълване</h1>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <label for="name" class="imeNaPole">Име:</label>
+                        <div class="col-2">
+                            <label for="name" class="imeNaPole">Име:</label><br>
                             <label for="phone" class="imeNaPole">Телефон:</label>
+                            <label for="name" class="imeNaPole">Заглавие:</label><br>
+                           
                         </div>
-                        <div class="col">
-                            <input type="text" id="name" name="name" class="stoinostNaPole">
+                        <div class="col-5">
+                            <input type="text" id="name" name="name" class="stoinostNaPole imePole">
                             <input type="text" id="phone" name="phone" class="stoinostNaPole">
                         </div>
-                        <div class="col">
+                        <div class="col-5">
                             <label for="status" class="imeNaPole">Статус:</label>
-                            <!-- <input type="text" id="status" name="status" value="Doe" class="stoinostNaPole2"> -->
-                            <select name="status" id="petStatuss" class="stoinostNaPole2">
+                            <select name="status" id="petStatus" class="stoinostNaDropdown">
                                 <option value="lost">Изгубено</option>
                                 <option value="found">Намерено</option>                            
+                            </select><br>
+                            <label for="category" class="imeNaPole">Категория:</label>
+                            <select name="category" id="category" class="stoinostNaDropdown">
+                                <option value="lost">Кон</option>
+                                <option value="found">Друго</option>                            
                             </select>
                         </div>
                     </div>
