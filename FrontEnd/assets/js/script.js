@@ -58,28 +58,8 @@ var openButton2 = document.getElementById("open-popup2");
 var closeButton2 = document.getElementById("close-popup2");
 
 // Function to open the new popup
-function openPopup2(image, phone, name, category, status, location, date, title, text) {
+function openPopup2() {
     popup2.style.display = "block";
-
-    var popupImage = document.getElementById("popupImage");
-    var popupPhone = document.getElementById("popupPhone");
-    var popupName = document.getElementById("popupName");
-    var popupCategory = document.getElementById("popupCategory");
-    var popupStatus = document.getElementById("popupStatus");
-    var popupLocation = document.getElementById("popupLocation");
-    var popupDate = document.getElementById("popupDate");
-    var popupTitle = document.getElementById("popupTitle");
-    var popupText = document.getElementById("popupText");
-
-    popupImage.src = image;
-    popupPhone.innerHTML = phone;
-    popupName.innerHTML = name;
-    popupCategory.innerHTML = category;
-    popupStatus.innerHTML = status;
-    popupLocation.innerHTML = location;
-    popupDate.innerHTML = date;
-    popupTitle.innerHTML = title;
-    popupText.innerHTML = text;
 }
 
 // Function to close the new popup
