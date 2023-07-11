@@ -26,11 +26,14 @@ window.addEventListener("click", function (event) {
     if (event.target === popup) {
         closePopup();
     }
+    if (event.target === popup2) {
+        closePopup2();
+    }
 });
 
 // Submit form
 document.getElementById("myForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+    /*event.preventDefault(); // Prevent form submission*/
     // Add your code to handle form submission here
     closePopup(); // Close the popup after form submission
 });
@@ -72,10 +75,3 @@ function closePopup2() {
 // Attach event listeners for the new popup
 openButton2.addEventListener("click", openPopup2);
 closeButton2.addEventListener("click", closePopup2);
-
-// Close the new popup when the user clicks outside it
-window.addEventListener("click", function (event) {
-    if (event.target === popup2) {
-        closePopup2();
-    }
-});
