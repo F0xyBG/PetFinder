@@ -54,7 +54,6 @@ function clearForm() {
 
 // Get the new popup and its associated elements
 var popup2 = document.getElementById("popup2");
-var openButton2 = document.getElementById("open-popup2");
 var closeButton2 = document.getElementById("close-popup2");
 
 // Function to open the new popup
@@ -89,9 +88,7 @@ function closePopup2() {
         popup2.style.display = "none";
         popup2.style.animation = "";
     }, 0);
-    console.log("mama mu")
 }
 
 // Attach event listeners for the new popup
-openButton2.addEventListener("click", openPopup2);
 closeButton2.addEventListener("click", closePopup2);
