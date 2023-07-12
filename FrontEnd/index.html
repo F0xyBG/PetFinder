@@ -114,14 +114,14 @@
         </section> <!-- End Post Grid Section -->
         <section id="publications" class="category-section">
             <div class="container" data-aos="fade-up">
-
-                <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                <div class="section-header d-flex justify-content-between align-items-center mb-5" style="padding-right:130px ;">
                     <h2>Публикации</h2>
                     <div>
                         <select name="filter" id="filter" class="stoinostNaPole2">
-                            <option value="status">Статус</option>
-                            <option value="category">Категория</option>
-                        </select>
+                            <option value="none" selected disabled hidden>Филтри</option>
+                            <option value="status" class="filterText">Статус</option>
+                            <option value="category" class="filterText">Категория</option>
+                        </select>   
                     </div>
                 </div>
                 <div id="postFeed">
@@ -207,7 +207,6 @@
                             <label for="title" class="imeNaPole">Заглавие:</label><br>
                             <label for="text" class="imeNaPole">Съдържание:</label><br>
                             <label for="location" class="imeNaPole imeLokaciq">Локация:</label><br>
-                           
                         </div>
                         <div class="col-5">
                             <input type="text" id="name" name="name" class="stoinostNaPole imePole">

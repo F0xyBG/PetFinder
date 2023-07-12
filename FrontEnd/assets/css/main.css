@@ -1606,8 +1606,6 @@ font-size: 190%;
 font-style: normal;
 font-weight: 600;
 margin-bottom: 30px;
-
-padding-top: 25px;
 }
 
 .imeNaPole{
@@ -1654,4 +1652,15 @@ padding-top: 25px;
     width: 190px;
     padding-left: 20px;
     cursor: pointer;
+}
+
+.stoinostNaPole2{
+  height: 100%;
+  width: 180%;
+  font-size: 32px;
+  border-width: 0px 0px 2px 0px;
+  border-color: #2D2D2D;
+}
+.filterText{
+  font-size: 32px; 
 }
