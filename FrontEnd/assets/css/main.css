@@ -1582,6 +1582,10 @@ section {
     font-family: EB Garamond;
 }
 
+.right-post{
+  position: relative;
+}
+
 .right-post h1 {
     text-align: center;
     font-size: 250%;
@@ -1664,3 +1668,10 @@ margin-bottom: 30px;
 .filterText{
   font-size: 32px; 
 }
+
+.comment-image{
+  position: absolute;
+  bottom:0;
+  right:3%;
+}
+
