@@ -41,9 +41,9 @@ let Database = class {
     }
 
     // Insert new post
-    insertPost(title, text, images, phone, name, category, status) {
+    insertPost(title, text, images, phone, name, category, status, location) {
         const promise = new Promise((resolve, reject) => {
-            this.con.query('INSERT INTO `posts` (`title`, `text`, `images`, `phone`, `name`, `category`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?);', [title, text, images, phone, name, category, status], function (error, results, fields) {
+            this.con.query('INSERT INTO `posts` (`title`, `text`, `images`, `phone`, `name`, `category`, `status`, `location`, `date`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW());', [title, text, images, phone, name, category, status, location], function (error, results, fields) {
                 if (error) throw error;
                 resolve(results.insertId);
             });
@@ -54,7 +54,7 @@ let Database = class {
     // Make a new comment
     insertComment(post_id, comment_text, comment_images) {
         const promise = new Promise((resolve, reject) => {
-            this.con.query('INSERT INTO `comments` (`post_id`, `comment_text`, `comment_images`) VALUES (?, ?, ?);', [post_id, comment_text, comment_images], function (error, results, fields) {
+            this.con.query('INSERT INTO `comments` (`post_id`, `comment_text`, `comment_images`, `date`) VALUES (?, ?, ?, NOW());', [post_id, comment_text, comment_images], function (error, results, fields) {
                 if (error) throw error;
                 resolve(results.insertId);
             });
