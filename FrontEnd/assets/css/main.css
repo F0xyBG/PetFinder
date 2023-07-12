@@ -1628,7 +1628,9 @@ margin-bottom: 30px;
 .stoinostNaPole2{
   height: 100%;
   width: 180%;
-  font-size: 32px; 
+  font-size: 32px;
+  border-width: 0px 0px 2px 0px;
+  border-color: #2D2D2D;
 }
 .filterText{
   font-size: 32px; 
