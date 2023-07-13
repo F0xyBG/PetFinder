@@ -79,6 +79,14 @@ app.post("/postUpload", upload.single('image'), (req, res) => {
     })
 });
 
+//API endpoint for making a comment
+app.post("/makeComment", (req, res) => {
+    var host = req.get('host');
+    db.insertComment(req.body.post_id, req.body.phone, req.body.name, req.body.comment_text).then((val) => {
+        res.redirect(host);
+    })
+});
+
 //API endpoint for deleting a comment
 app.delete("/deleteComment", (req, res) => {
     db.deleteComment(req.body.comment_id).then((val) => {
