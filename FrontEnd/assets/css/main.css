@@ -1534,7 +1534,15 @@ section {
     margin-bottom: 5px;
 }
 
-
+.comment-section{
+    margin-top: 10px;
+    z-index: 9999;
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 80px 80px;
+}
 
 .imgContainer{
   position: relative;
