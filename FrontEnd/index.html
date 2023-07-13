@@ -105,13 +105,7 @@
                 </div>
             </div>
         </section><!-- End Hero Slider Section -->
-        </div>
-        </div>
-
-        </div> <!-- End .row -->
-        </div>
-
-        </section> <!-- End Post Grid Section -->
+ 
         <section id="publications" class="category-section">
             <div class="container" data-aos="fade-up">
                 <div class="section-header d-flex justify-content-between align-items-center mb-5" style="padding-right:130px ;">
@@ -147,7 +141,7 @@
 
                 <div id="post" class="breik-liniq"></div>
 
-                <p class="signal-title">Намерили сте изгубено животно? </br> Или сте изгубили домашния си любимец?</p>
+                <p class="signal-title">Намерили сте изгубено животно? <br> Или сте изгубили домашния си любимец?</p>
 
                 <p class="signal-tekst">Направете публикация за по-малко от 5 минути, като оставите телефон за връзка, локация, на която сте намерили/изгубили животното, текстово описание, както и негова снимка.</p>
 
@@ -160,12 +154,6 @@
                         </div>
                     </div>
                 </div>
-                
-
-            </div>
-            </div>
-            </div>
-            </div>
             </div>
         </section>
     
@@ -179,7 +167,7 @@
                 <label for="title">Title:</label><br>
                 <input type="text" id="title" name="title" value="John"><br>
                 <label for="text">Text:</label><br>
-                <textarea id="text" name="text" value="Кученце"></textarea> <br />
+                <textarea id="text" name="text" value="Кученце"></textarea> <br>
                 <label for="phone">Phone:</label><br>
                 <input type="text" id="phone" name="phone" value="John"><br>
                 <label for="name">Name:</label><br>
@@ -229,10 +217,10 @@
                                 <option value="Хамстер">Хамстер</option>
                                 <option value="Кон">Кон</option>
                                 <option value="found">Друго</option>
-                            </select><br />
-                            <label for="image" class="imeNaPole">Снимка на животното:</label><br />
-                            <input type="file" name="image" id="image" accept='image/*' hidden/>
-                            <label for="image"><img src="./images/upload-image-button.png" class="uploadImage" id="imgUpload"></label>
+                            </select><br>
+                            <label for="image" class="imeNaPole">Снимка на животното:</label><br>
+                            <input type="file" name="image" id="image" accept='image/*' hidden>
+                            <label for="image"><img src="./images/upload-image-button.png" class="uploadImage" id="imgUpload" alt="Качете снимката си тук"></label>
                         </div>
                     </div>
                     <div class="row">
@@ -251,7 +239,7 @@
                 <div class="row">
                     <div class="col left-post">
                         <div class="post-image">
-                            <img src="http://localhost:3000/images/image-1688979736460.webp" alt="Image 1" id="popupImage">
+                            <img src="https://paradepets.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg" alt="Image 1" id="popupImage">
                         </div>
                         <div class="info">
                             <h2 class="post-phone" id="popupPhone">08969696969</h2>
@@ -362,7 +350,6 @@
 
              // Examine the text in the response
              response.json().then(function (data) {
-                 console.log(data);
                  data.forEach((post) => {
                      if (i % 2 == 0) { htmlString += '<div class="row">' }
 
@@ -371,10 +358,10 @@
                      else if (post.status == "found") {status = "Изгубено"}
                      htmlString += `
                      <div class="col">
-                         <div class="post-entry-1">
-                             <img src="`+ post.images + `" onclick="openPopup2(` + `'` + post.images + `', '` + post.phone + `', '` + post.name + `', '` + post.category + `', '` + status + `', '` + post.location + `', '` + post.date + `', '` + post.title + `', '` + post.text + `')" alt="Снимка" class="img-fluid" style="width:  636px; height: 404px;">
+                         <div class="post-entry-1" onclick="openPopup2(` + `'` + post.images + `', '` + post.phone + `', '` + post.name + `', '` + post.category + `', '` + status + `', '` + post.location + `', '` + post.date + `', '` + post.title + `', '` + post.text + `')">
+                             <img src="`+ post.images + `" alt="Снимка" class="img-fluid" style="width:  636px; height: 404px;">
                              <div class="post-meta"><span class="date">` + post.category + `, ` + status +`</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                             <h2><a href="single-post.html">` + post.title + `</a></h2>
+                             <h2>` + post.title + `</h2>
                          </div>
                      </div>
                      `;

@@ -455,7 +455,8 @@ section {
 # Posts
 --------------------------------------------------------------*/
 .post-entry-1 {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .post-entry-1 img {
