@@ -65,6 +65,15 @@ INSERT INTO `posts` (`id`, `title`, `text`, `images`, `phone`, `name`, `category
 (3, 'Загубих си котето ', 'Моля ви помогнете ми да си взема мацките от Тева!', 'http://localhost:3000/images/image-1689082368438.jpg', '0888987876', 'Денислав Димчев', 'Котка', 'searching_for_pet', 'Перник', '2023-07-11 16:32:48');
 
 --
+-- Схема на данните от таблица `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `text`, `images`, `phone`, `name`, `category`, `status`, `location`, `date`) VALUES
+(1, 'Кучето ми Пепи избяга! Моля помогнете!', 'Кучето ми Пепи избяга от вкъщи и отиде в посока 27 блок на квартал Тева', 'http://localhost:3000/images/image-1689078937755.webp', '08969696969', 'Георги', 'Куче', 'searching_for_pet', 'Перник', '2023-07-11 15:35:37'),
+(2, 'Котето ми просто си излезе!', 'Котето ми Гошко просто излезе от вкъщи и не се върна. Моля ако го видите в областта на кв. Мошино да ми се обадите незабавно!', 'http://localhost:3000/images/image-1689079062215.jpg', '08969696969', 'Петър', 'Котка', 'searching_for_pet', 'Перник', '2023-07-11 15:37:42'),
+(3, 'Загубих си котето ', 'Моля ви помогнете ми да си взема мацките от Тева!', 'http://localhost:3000/images/image-1689082368438.jpg', '0888987876', 'Денислав Димчев', 'Котка', 'searching_for_pet', 'Перник', '2023-07-11 16:32:48');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -95,6 +104,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
