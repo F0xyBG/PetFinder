@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Време на генериране: 12 юли 2023 в 13:32
+-- Време на генериране: 13 юли 2023 в 09:15
 -- Версия на сървъра: 10.4.27-MariaDB
 -- Версия на PHP: 8.2.0
 
@@ -30,8 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `comment_text` varchar(255) NOT NULL,
-  `comment_images` varchar(255) NOT NULL,
   `date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
