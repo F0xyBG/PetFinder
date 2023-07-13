@@ -1684,3 +1684,6 @@ margin-bottom: 30px;
   right:3%;
 }
 
+::selection {
+  background-color: #638C4F;
+}

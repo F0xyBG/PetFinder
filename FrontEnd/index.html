@@ -113,8 +113,18 @@
                     <div>
                         <select name="filter" id="filter" class="stoinostNaPole2">
                             <option value="none" selected disabled hidden>Филтри</option>
-                            <option value="status" class="filterText">Статус</option>
-                            <option value="category" class="filterText">Категория</option>
+                            <optgroup label="Статус">
+                                <option value="statusFound" class="filterText">Намерено</option>
+                                <option value="statusLost" class="filterText">Изгубено</option>
+                            </optgroup>
+                            <optgroup label="Категория">
+                                <option value="dog" class="filterText">Куче</option>
+                                <option value="cat" class="filterText">Котка</option>
+                                <option value="snake" class="filterText">Змия</option>
+                                <option value="hamster" class="filterText">Хамстер</option>
+                                <option value="horse" class="filterText">Кон</option>
+                                <option value="other" class="filterText">Друго</option>
+                            </optgroup>
                         </select>
                     </div>
                 </div>
@@ -211,12 +221,12 @@
                             </select><br>
                             <label for="category" class="imeNaPole">Категория:</label>
                             <select name="category" id="category" class="stoinostNaDropdown">
-                                <option value="Куче">Куче</option>
-                                <option value="Котка">Котка</option>
-                                <option value="Змия">Змия</option>
-                                <option value="Хамстер">Хамстер</option>
-                                <option value="Кон">Кон</option>
-                                <option value="found">Друго</option>
+                                <option value="dog">Куче</option>
+                                <option value="cat">Котка</option>
+                                <option value="snake">Змия</option>
+                                <option value="hamster">Хамстер</option>
+                                <option value="horse">Кон</option>
+                                <option value="other">Друго</option>
                             </select><br>
                             <label for="image" class="imeNaPole">Снимка на животното:</label><br>
                             <input type="file" name="image" id="image" accept='image/*' hidden>
