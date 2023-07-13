@@ -113,6 +113,7 @@
                     <div>
                         <select name="filter" id="filter" class="stoinostNaPole2">
                             <option value="none" selected disabled hidden>Филтри</option>
+                            <option value="none" selected disabled hidden>Филтри</option>
                             <option value="status" class="filterText">Статус</option>
                             <option value="category" class="filterText">Категория</option>
                         </select>
@@ -141,6 +142,7 @@
 
                 <div id="post" class="breik-liniq"></div>
 
+                <p class="signal-title">Намерили сте изгубено животно? <br> Или сте изгубили домашния си любимец?</p>
                 <p class="signal-title">Намерили сте изгубено животно? <br> Или сте изгубили домашния си любимец?</p>
 
                 <p class="signal-tekst">Направете публикация за по-малко от 5 минути, като оставите телефон за връзка, локация, на която сте намерили/изгубили животното, текстово описание, както и негова снимка.</p>
@@ -221,13 +223,45 @@
                             <label for="image" class="imeNaPole">Снимка на животното:</label><br>
                             <input type="file" name="image" id="image" accept='image/*' hidden>
                             <label for="image"><img src="./images/upload-image-button.png" class="uploadImage" id="imgUpload" alt="Качете снимката си тук"></label>
+                            </select><br>
+                            <label for="image" class="imeNaPole">Снимка на животното:</label><br>
+                            <input type="file" name="image" id="image" accept='image/*' hidden>
+                            <label for="image"><img src="./images/upload-image-button.png" class="uploadImage" id="imgUpload" alt="Качете снимката си тук"></label>
                         </div>
                     </div>
                     <div class="row">
-                        <input type="submit" value="Публикувай">
-                    </div>
+                        <div class="col-9">
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Публикувай" class="puslicButton">
+
+                        </div>
+                    </div>  
+               </div>
+            </form> 
+                
+
+            <!--Make comment post-->
+
+            <!-- <form action="http://localhost:3000/makeComment" method="POST">
+                <div class="commentContainer container">
+                  <div class="row">
+                   <div class="col-6">
+                    <label for="status" class="imeNaPole">Име:</label><br>
+                    <label for="phone" class="imeNaPole">Телефон:</label><br>
+                            <label for="text" class="imeNaPole">Коментар:</label><br>
+                            <input type="submit" value="Публикувай" class="pusbishCommnetBut" >     
+                  </div>
+                  <div class="col-6">
+                    <input type="text" name="post_id" id="post_id" value="1" hidden>
+
+                    <input type="text" name="name" id="name" required class="stoinostNaPole">
+                    <input type="text" name="phone" id="phone" required class="stoinostNaPole imePole">
+                    <textarea name="comment_text" id="comment_text" rows="5" cols="30" required class="stoinostNaPole textPole"></textarea>
                 </div>
-            </form>
+                 </div>
+                </div>
+            </form>  -->
         </div>
 
 
@@ -286,6 +320,7 @@
 
                     </div>
 
+                
                 
 
                 </div>
