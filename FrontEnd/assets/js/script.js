@@ -54,12 +54,31 @@ function clearForm() {
 
 // Get the new popup and its associated elements
 var popup2 = document.getElementById("popup2");
-var openButton2 = document.getElementById("open-popup2");
 var closeButton2 = document.getElementById("close-popup2");
 
 // Function to open the new popup
-function openPopup2() {
+function openPopup2(image, phone, name, category, status, location, date, title, text) {
     popup2.style.display = "block";
+
+    var popupImage = document.getElementById("popupImage");
+    var popupPhone = document.getElementById("popupPhone");
+    var popupName = document.getElementById("popupName");
+    var popupCategory = document.getElementById("popupCategory");
+    var popupStatus = document.getElementById("popupStatus");
+    var popupLocation = document.getElementById("popupLocation");
+    var popupDate = document.getElementById("popupDate");
+    var popupTitle = document.getElementById("popupTitle");
+    var popupText = document.getElementById("popupText");
+
+    popupImage.src = image;
+    popupPhone.innerHTML = phone;
+    popupName.innerHTML = name;
+    popupCategory.innerHTML = category;
+    popupStatus.innerHTML = status;
+    popupLocation.innerHTML = location;
+    popupDate.innerHTML = date;
+    popupTitle.innerHTML = title;
+    popupText.innerHTML = text;
 }
 
 // Function to close the new popup
@@ -69,9 +88,7 @@ function closePopup2() {
         popup2.style.display = "none";
         popup2.style.animation = "";
     }, 0);
-    console.log("mama mu")
 }
 
 // Attach event listeners for the new popup
-openButton2.addEventListener("click", openPopup2);
 closeButton2.addEventListener("click", closePopup2);
