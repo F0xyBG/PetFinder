@@ -223,7 +223,6 @@
                             <label for="image" class="imeNaPole">Снимка на животното:</label><br>
                             <input type="file" name="image" id="image" accept='image/*' hidden>
                             <label for="image"><img src="./images/upload-image-button.png" class="uploadImage" id="imgUpload" alt="Качете снимката си тук"></label>
-                            </select><br>
                         </div>
                     </div>
                     <div class="row">
@@ -364,6 +363,8 @@
         let htmlString = "";
         let status = "";
         let i = 0;
+        let date;
+        let dateString;
 
         fetch('http://localhost:3000/posts')
             .then(
@@ -377,6 +378,8 @@
                     // Examine the text in the response
                     response.json().then(function (data) {
                         data.forEach((post) => {
+                            date = new Date(post.date);
+                            dateString = date.toLocaleDateString('bg')
                             if (i % 2 == 0) { htmlString += '<div class="row">' }
 
                             if (post.status == "searching_for_owner") { status = "Намерено" }
@@ -384,7 +387,7 @@
                             else if (post.status == "found") { status = "Изгубено" }
                             htmlString += `
                          <div class="col">
-                             <div class="post-entry-1" onclick="openPopup2(` + `'` + post.images + `', '` + post.phone + `', '` + post.name + `', '` + post.category + `', '` + status + `', '` + post.location + `', '` + post.date + `', '` + post.title + `', '` + post.text + `')">
+                             <div class="post-entry-1" onclick="openPopup2(` + `'` + post.images + `', '` + post.phone + `', '` + post.name + `', '` + post.category + `', '` + status + `', '` + post.location + `', '` + dateString + `', '` + post.title + `', '` + post.text + `')">
                                  <img src="`+ post.images + `" alt="Снимка" class="img-fluid" style="width:  636px; height: 404px;">
                                  <div class="post-meta"><span class="date">` + post.category + `, ` + status + `</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
                                  <h2>` + post.title + `</h2>
