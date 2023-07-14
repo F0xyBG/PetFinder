@@ -52,9 +52,9 @@ let Database = class {
     }
 
     // Make a new comment
-    insertComment(post_id, comment_text, comment_images) {
+    insertComment(post_id, phone, name, comment_text) {
         const promise = new Promise((resolve, reject) => {
-            this.con.query('INSERT INTO `comments` (`post_id`, `comment_text`, `comment_images`, `date`) VALUES (?, ?, ?, NOW());', [post_id, comment_text, comment_images], function (error, results, fields) {
+            this.con.query('INSERT INTO `comments` (`post_id`, `phone`, `name`, `comment_text`,  `date`) VALUES (?, ?, ?, ?, NOW());', [post_id, phone, name, comment_text], function (error, results, fields) {
                 if (error) throw error;
                 resolve(results.insertId);
             });
